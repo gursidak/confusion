@@ -120,9 +120,36 @@
               </a>
             </li>
           </ul>
+          <span class="navbar-text">
+            <a data-toggle="modal" data-target="#loginModal">
+              <span class="fa fa-sign-in"></span>Login
+            </a>
+          </span>
         </div>
       </div>
     </nav>
+
+    <!--Login Modal -->
+
+    <div id="loginModal" class="modal" role="dialog">
+      <div class="modal-dialog modal-lg" role="content">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Login</h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+              cum ut ullam corrupti ipsam? Voluptates reiciendis suscipit unde
+              rerum pariatur.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Header -->
     <header class="jumbotron">
@@ -147,9 +174,13 @@
                   href="#reserve-table-form"
                   style="padding: 8px 25px"
                   type="button"
+                  data-toggle="tooltip"
+                  title="Or Call Us at <br/><strong>+1 (537) 539 9953 </strong>"
+                  data-html="true"
+                  data-placement="bottom"
                 >
                   Reserve Table
-              </a>
+                </a>
               </div>
             </div>
           </div>
@@ -225,7 +256,7 @@
 
             <div class="media-body">
               <h2>Alberto Somayya</h2>
-              <h4>Executive Chef</h4>
+              <h4>Executive</h4>
               <p class="d-none d-sm-block">
                 Award winning three-star Michelin chef with wide International
                 experience having worked closely with whos-who in the culinary
@@ -447,5 +478,11 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
   </body>
 </html>
