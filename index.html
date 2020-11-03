@@ -78,6 +78,19 @@
       .history-box {
         padding: 50px 0px 50px 0px;
       }
+      #loginModal {
+        position: absolute;
+        top: 10px;
+        right: 100px;
+        bottom: 0;
+        left: 0;
+        z-index: 10040;
+        overflow: auto;
+        overflow-y: auto;
+      }
+      .modal-backdrop{
+        background:black
+      }
     </style>
 
     <title>Ristorante Con Fusion</title>
@@ -133,7 +146,7 @@
 
     <!--Login Modal -->
 
-    <div id="loginModal" class="modal" role="dialog">
+  <div id="loginModal" style="max-width: 45%; margin: 0 auto;" style=""" class="modal" role="dialog">
       <div class="modal-dialog modal-lg" role="content">
         <div class="modal-content">
           <div class="modal-header">
@@ -143,11 +156,41 @@
             </button>
           </div>
           <div class="modal-body">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-              cum ut ullam corrupti ipsam? Voluptates reiciendis suscipit unde
-              rerum pariatur.
-            </p>
+            <form style="padding: 20px;">
+              <div class="form-group ">
+                <label for="exampleInputEmail1">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                />
+                <small id="emailHelp" class="form-text text-muted"
+                  >We'll never share your email with anyone else.</small
+                >
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                />
+              </div>
+              <div class="form-group form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="exampleCheck1"
+                />
+                <label class="form-check-label" for="exampleCheck1"
+                  >Check me out</label
+                >
+              </div>
+              <button type="submit" class="btn btn-danger btn-block">
+                Submit
+              </button>
+            </form>
           </div>
         </div>
       </div>
